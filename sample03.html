@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 必要なライブラリをネット上から直接参照 CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css"/>
+    <!-- 自分のcss -->
+    <link rel="stylesheet" href="./css/style03.css" />
+    <!-- 自分のjs -->
+    <script src="./js/script03.js"></script>
+    <title>sample03</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      
+      
+      <div id="clock">
+        <div class="hand" id="h_hand"></div>
+        <div class="hand" id="m_hand"></div>
+        <div class="hand" id="s_hand"></div>
+      </div>
+
+      <div id="form">
+        <div id="dig_time">00:00:00</div>
+        <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+        <div id="btn">記録</div>
+      </div>
+
+      <div id="record"></div>
+
+      <footer>
+        <div id="footer_h"></div>
+        <div id="footer_m"></div>
+        <div id="footer_s"></div>
+      </footer>
+
+    </div>
+  </body>
+</html>

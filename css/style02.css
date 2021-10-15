@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
+
+li{
+  list-style: none;
+}
+
+img{
+  max-width: 100%;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  top: 0;
+}
+
+#wave{
+  width:60px;
+  height: 60px;
+  background-image: url(../images/wave.png);
+  background-size: 60px auto;
+  background-position: center center;
+  background-repeat: repeat-x;
+  margin-left: auto;
+}
+
+#menu{
+  position: fixed;
+  top: 100px;
+  font-size: 100px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+  left: 20px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+#content{
+  position: relative;
+  margin: 100px auto;
+  padding: 20px;
+  max-width: 1000px;
+}
+
+.set{
+  background-color: #ccc;
+  min-height: 400px;
+  margin-bottom: 40px;
+}
+
+body.one #backimg01,
+body.two #backimg02,
+body.three #backimg03{
+  opacity: 1;
+}
+
+#back{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fcfcfc;
+}
+
+.backimg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 1s all;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#line{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, blue,red);
+}
