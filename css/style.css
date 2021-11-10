@@ -24,9 +24,6 @@
       background-color: #8ac9c9;
     }
 
-    *{
-      cursor: url(<../images/nekoaikonn.png>),auto;
-      }
     
     .shake-hard {
       display: inherit;
@@ -169,4 +166,14 @@
       }
       a {
         color: #0bd;
+      }
+
+      body {
+        cursor: none;  /*本物のカーソルを非表示に*/
+      }
+      
+      #cursor{
+        position: fixed;     /* 絶対位置になるように指定 */
+        z-index: 2;          /* 重なり順を上に指定。他の要素に合わせて数字を大きくしてください。 */
+        pointer-events: none;/*【重要】マウス直下に常に画像があるので、全てをクリックできなくなる。noneにして対応*/
       }
