@@ -6,3 +6,13 @@ https://wemo.tech/3214#index_id0
 http://elrumordelaluz.github.io/csshake/
 
 csshake
+
+
+
+<div class="shake-slow"></div>
+    <div class="shake-little"></div>
+    <div class="shake-horizontal"></div>
+    <div class="shake-rotate"></div>
+    <div class="shake-opacity"></div>
+    <div class="shake-crazy"></div>
+    <div class="shake-chunk"></div>
