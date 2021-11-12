@@ -1,49 +1,7 @@
-$(function(){
-
-//マウスストーカー用のdivタグを作成
-const stalker = document.createElement('div');  //divタグを作成
-stalker.id = 'stalker';                         //IDを付与
-document.body.appendChild(stalker);
-
-
-document.addEventListener('mousemove', function (e) {
-    stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
- })
-
-});
-
-
-//リンクへ吸い付く処理
-const linkElem = document.querySelectorAll('a:not(.no_stick_)');
-for (let i = 0; i < linkElem.length; i++) {
-    //マウスホバー時
-    linkElem[i].addEventListener('mouseover', function (e) {
-        hovFlag = true;
-
-        //マウスストーカーにクラスをつける
-        stalker.classList.add('hov_');
-
-        //マウスストーカーの位置をリンクの中心に固定
-        let rect = e.target.getBoundingClientRect();
-        let posX = rect.left + (rect.width / 2);
-        let posY = rect.top + (rect.height / 2);
-
-        stalker.style.transform = 'translate(' + posX + 'px, ' + posY + 'px)';
-
-    });
-    //マウスホバー解除時
-    linkElem[i].addEventListener('mouseout', function (e) {
-        hovFlag = false;
-        stalker.classList.remove('hov_');
-    });
-}
-
-jQuery(".container").raindrops({
-    color: "#0bd",
-    canvasHeight: 250
-  });
-
-
+/*
+ *  Query UI plugin for raindrops on water effect.
+ *  https://github.com/d-harel/raindrops.git
+ */
 $.widget("water.raindrops", {
     options: {
         waveLength: 340,    // Wave Length. A numeric value. The higher the number, the smaller the wave length.
@@ -166,23 +124,3 @@ function raindropsAnimationTick(drop) {
     });
 }
 ;
-
-$(function()
-{
-
-    var cursor=$("#cursor");
-    $(document).on("mousemove",function(e){
-      var x=e.clientX;
-      var y=e.clientY;
-
-      cursor.css({
-        "top":y+"px",
-        "left":x+"px"
-      });
-    });
-});
-
-jQuery(".container").raindrops({
-    color: "#0bd",
-    canvasHeight: 250
-  });
